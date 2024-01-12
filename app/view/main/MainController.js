@@ -48,6 +48,7 @@ Ext.define('MyApp.view.main.MainController', {
         });
     },
     
+   
     
     
     onConfirm: function (choice) {

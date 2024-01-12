@@ -7,12 +7,13 @@ Ext.define('MyApp.store.ProductStore', {
 
     proxy: {
         type: 'ajax',
-        url: 'your_product_api_url', // Replace with your actual API URL
+        url: 'https://dummyjson.com/products',
         reader: {
             type: 'json',
-            rootProperty: 'data'
+            rootProperty: 'products'
         }
     },
 
-    autoLoad: true
+    autoLoad: true,
+    
 });
