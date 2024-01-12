@@ -18,6 +18,7 @@ Ext.define('MyApp.view.main.Main', {
         'MyApp.view.main.List',
         'MyApp.view.main.ProductView',
         'MyApp.view.main.UserInputForm',
+        'MyApp.view.main.HarryPotterCharacterList',
        
     ],
 
@@ -83,7 +84,7 @@ Ext.define('MyApp.view.main.Main', {
         // The following grid shares a store with the classic version's grid as well!
         items: [{xtype: 'mainlist'},]
     }, {
-        title: 'Users',
+        title: 'Product',
         iconCls: 'fa-user',
         items: [{ xtype:'productview'},] ,
       
@@ -91,13 +92,13 @@ Ext.define('MyApp.view.main.Main', {
     }, {
         title: 'TextSubmit',
         iconCls: 'fa-users',
-        items: [{ xtype:'userinputform'},] ,
+      
     }, {
-        title: 'Settings',
+        title: 'Harry Poter Character',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        
+        items: [{ xtype:'harrypottercharacterlist'},] ,
+        
     },
 ]
 });
