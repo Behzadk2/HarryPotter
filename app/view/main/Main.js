@@ -101,5 +101,6 @@ Ext.define('MyApp.view.main.Main', {
         bind: {
             html: '{loremIpsum}'
         }
-    }]
+    },
+]
 });

@@ -36,6 +36,7 @@ Ext.define('MyApp.view.main.List', {
                     change: 'onQuantityFilterChange'
                 }
             },
+            
             ' ',
             {
                 xtype: 'datefield',
@@ -49,7 +50,12 @@ Ext.define('MyApp.view.main.List', {
                 listeners: {
                     change: 'onWarrantyEndFilterChange'
                 }
-            }
+            },
+            {
+                xtype: 'button',
+                text: 'Export to Excel',
+                handler: 'onExportButtonClick'
+            },
         ]
     }],
 

@@ -34,6 +34,20 @@ Ext.define('MyApp.view.main.MainController', {
             return Ext.Date.parse(record.get('warrantyEnd'), 'Y-m-d') <= newValue;
         });
     },
+
+    
+    onExportButtonClick: function(button) {
+        var grid = button.up('grid'),
+            store = grid.getStore();
+    
+        Ext.ux.Exporter.exportGrid(grid, 'exported-data.xlsx', 'excel', {
+            includeHeaders: true,
+            rows: store.getRange(),
+            columns: grid.columns,
+            utf8BOM: true
+        });
+    },
+    
     
     
     onConfirm: function (choice) {
