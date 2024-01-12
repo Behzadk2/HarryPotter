@@ -13,19 +13,15 @@ Ext.define("MyApp.view.main.HarryPotterCharacterList", {
     type: "harrypottercharacters",
   },
 
-  columns: [
-    { text: "id", dataIndex: "id", flex: 1 },
-    { text: "name", dataIndex: "name", flex: 1 },
-    { text: "Gender", dataIndex: "gender", flex: 1 },
-    { text: "House", dataIndex: "house", flex: 1 },
-    { text: "Date of Birth", dataIndex: "dateOfBirth", flex: 1 },
-    { text: "Year of Birth", dataIndex: "yearOfBirth", flex: 1 },
-    { text: "Wizard", dataIndex: "wizard", flex: 1 },
-    { text: "Ancestry", dataIndex: "ancestry", flex: 1 },
-    { text: "Eye Colour", dataIndex: "eyeColour", flex: 1 },
-    { text: "Hair Colour", dataIndex: "hairColour", flex: 1 },
-    { text: "Wand", dataIndex: "wand", flex: 1 },
-  ],
+  columns:[
+    { text: 'Character', dataIndex: 'character', flex: 1 },
+    { text: 'Nickname', dataIndex: 'nickname', flex: 1 },
+    { text: 'Hogwarts Student', dataIndex: 'hogwartsStudent', flex: 1 },
+    { text: 'Hogwarts House', dataIndex: 'hogwartsHouse', flex: 1 },
+    { text: 'Interpreted By', dataIndex: 'interpretedBy', flex: 1 },
+    { text: 'Child', dataIndex: 'child', flex: 1, renderer: function (value) { return value.join(', '); } },
+    { text: 'Image', dataIndex: 'image', flex: 1, renderer: function (value) { return '<img src="' + value + '" height="50" />'; } }
+],
 
   listeners: {
     select: "onItemSelected", // Assuming you have a method for handling item selection

@@ -9,7 +9,7 @@ Ext.define('MyApp.store.HarryPotterCharacters', {
 
     proxy: {
         type: 'ajax',
-        url: 'https://hp-api.onrender.com/api/characters/staff', // Replace with your actual API URL
+        url: 'https://harry-potter-api-en.onrender.com/characters', // Replace with your actual API URL
         reader: {
             type: 'json',
            // rootProperty: '' // Adjust if needed based on the actual structure of the API response
