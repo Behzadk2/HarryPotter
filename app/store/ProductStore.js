@@ -10,7 +10,7 @@ Ext.define('MyApp.store.ProductStore', {
         url: 'https://dummyjson.com/products',
         reader: {
             type: 'json',
-            rootProperty: 'products'
+            rootProperty: 'products' //need the named product as root instead of data
         }
     },
 

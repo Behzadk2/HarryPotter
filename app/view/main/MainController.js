@@ -48,7 +48,9 @@ Ext.define('MyApp.view.main.MainController', {
         });
     },
     
-   
+    renderThumbnail: function(value) {
+        return '<img src="' + value + '" alt="Thumbnail" style="max-width: 80px; max-height: 80px;">';
+    },
     
     
     onConfirm: function (choice) {
