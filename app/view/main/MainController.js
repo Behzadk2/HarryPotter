@@ -57,5 +57,24 @@ Ext.define('MyApp.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
-    }
+    },
+
+    ////FormText
+
+    onSubmitClick: function () {
+        var form = this.getView();
+
+        if (form.isValid()) {
+            
+            form.submit();
+        }
+    },
+    
+    onFormSubmit: function (form, result) {
+        var store = this.getView().getStore();
+        var formData = form.getValues();
+
+        store.add(formData);
+        form.reset();
+    }, 
 });

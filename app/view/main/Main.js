@@ -17,6 +17,7 @@ Ext.define('MyApp.view.main.Main', {
         'MyApp.view.main.MainModel',
         'MyApp.view.main.List',
         'MyApp.view.main.ProductView',
+        'MyApp.view.main.UserInputForm',
        
     ],
 
@@ -80,23 +81,17 @@ Ext.define('MyApp.view.main.Main', {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
-        items: [
-            {xtype: 'mainlist'},
-            
-            
-        ]
+        items: [{xtype: 'mainlist'},]
     }, {
         title: 'Users',
         iconCls: 'fa-user',
-        xtype:'productview',
+        items: [{ xtype:'productview'},] ,
       
         
     }, {
-        title: 'Groups',
+        title: 'TextSubmit',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [{ xtype:'userinputform'},] ,
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
