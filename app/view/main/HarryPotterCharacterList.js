@@ -20,10 +20,10 @@ Ext.define("MyApp.view.main.HarryPotterCharacterList", {
     { text: 'Hogwarts House', dataIndex: 'hogwartsHouse', flex: 1 },
     { text: 'Interpreted By', dataIndex: 'interpretedBy', flex: 1 },
     { text: 'Child', dataIndex: 'child', flex: 1, renderer: function (value) { return value.join(', '); } },
-    { text: 'Image', dataIndex: 'image', flex: 1, renderer: function (value) { return '<img src="' + value + '" height="50" />'; } }
+    { text: 'Image', dataIndex: 'image', flex: 1, renderer: function (value) {  return '<img src="' + value + '" height="50" class="full-screen-image" />'; } }
 ],
-
-  listeners: {
-    select: "onItemSelected", // Assuming you have a method for handling item selection
-  },
+listeners: {
+  itemclick: 'onGridItemClick'
+}
+  
 });

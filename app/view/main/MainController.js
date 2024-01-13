@@ -77,4 +77,38 @@ Ext.define('MyApp.view.main.MainController', {
         store.add(formData);
         form.reset();
     }, 
+
+
+    ///Harry Potter Controler 
+
+    onGridItemClick: function(grid, record, item, index, e, eOpts) {
+        if (e.getTarget('.full-screen-image')) {
+            var imageUrl = record.get('image');
+            this.showFullScreenImage(imageUrl);
+        }
+    },
+
+    showFullScreenImage: function(imageUrl) {
+        Ext.create('Ext.window.Window', {
+            title: 'Full Screen Image',
+            layout: 'fit',
+            width: '80%',
+            height: '80%',
+            items: {
+                xtype: 'image',
+                src: imageUrl,
+                mode: 'img',
+                alt: 'Full Screen Image',
+                style: 'width: 100%; height: 100%; object-fit: contain;'
+            },
+            modal: true,
+            maximizable: true,
+            closable: true
+        }).show();}
+
+
+
+
+
+
 });

@@ -91,14 +91,17 @@ Ext.define('MyApp.view.main.Main', {
         
     }, {
         title: 'TextSubmit',
-        iconCls: 'fa-users',
+        iconCls: 'fa-solid fa-envelope-open-text',
       
     }, {
         title: 'Harry Poter Character',
-        iconCls: 'fa-cog',
+        iconCls: 'fa-hat-wizard',
         
         items: [{ xtype:'harrypottercharacterlist'},] ,
         
     },
 ]
 });
+
+
+
