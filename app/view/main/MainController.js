@@ -59,24 +59,7 @@ Ext.define('MyApp.view.main.MainController', {
         }
     },
 
-    ////FormText
-
-    onSubmitClick: function () {
-        var form = this.getView();
-
-        if (form.isValid()) {
-            
-            form.submit();
-        }
-    },
     
-    onFormSubmit: function (form, result) {
-        var store = this.getView().getStore();
-        var formData = form.getValues();
-
-        store.add(formData);
-        form.reset();
-    }, 
 
 
     ///Harry Potter Controler 
@@ -104,10 +87,26 @@ Ext.define('MyApp.view.main.MainController', {
             modal: true,
             maximizable: true,
             closable: true
-        }).show();}
+        }).show();},
 
 
+//form
+onSubmitButtonClick: function() {
+    var form = this.getView().getForm();
 
+    if (form.isValid()) {
+       
+        var formData = form.getValues();
+        this.saveDataLocally(formData);
+    }
+},
+
+saveDataLocally: function(formData) {
+    var formStore = Ext.getStore('FormStore');
+    formStore.add(formData);
+
+    console.log('Data saved locally:', formData);
+}
 
 
 

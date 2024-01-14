@@ -17,7 +17,7 @@ Ext.define('MyApp.view.main.Main', {
         'MyApp.view.main.MainModel',
         'MyApp.view.main.List',
         'MyApp.view.main.ProductView',
-        'MyApp.view.main.UserInputForm',
+        'MyApp.view.main.MyForm',
         'MyApp.view.main.HarryPotterCharacterList',
        
     ],
@@ -92,7 +92,7 @@ Ext.define('MyApp.view.main.Main', {
     }, {
         title: 'TextSubmit',
         iconCls: 'fa-solid fa-envelope-open-text',
-      
+        xtype:'myform',
     }, {
         title: 'Harry Poter Character',
         iconCls: 'fa-hat-wizard',
