@@ -90,7 +90,7 @@ Ext.define('MyApp.view.main.Main', {
       
         
     }, {
-        title: 'TextSubmit',
+        title: 'TextttSubmit',
         iconCls: 'fa-solid fa-envelope-open-text',
         xtype:'myform',
     }, {
