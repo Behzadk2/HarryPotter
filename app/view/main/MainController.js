@@ -88,7 +88,7 @@ Ext.define('MyApp.view.main.MainController', {
             maximizable: true,
             closable: true
         }).show();},
-
+      
 
 //form
 onSubmitButtonClick: function() {

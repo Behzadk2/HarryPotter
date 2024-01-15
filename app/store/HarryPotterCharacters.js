@@ -4,7 +4,7 @@ Ext.define('MyApp.store.HarryPotterCharacters', {
     alias: 'store.harrypottercharacters',
 
     model: 'MyApp.model.HarryPotterCharacter',
-
+    groupField: 'hogwartsHouse', // Specify the field by which you want to group (e.g., hogwartsHouse)
     autoLoad: true,
 
     proxy: {

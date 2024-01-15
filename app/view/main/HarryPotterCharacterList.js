@@ -12,6 +12,11 @@ Ext.define("MyApp.view.main.HarryPotterCharacterList", {
   store: {
     type: "harrypottercharacters",
   },
+  features: [{
+    ftype: 'grouping', // Enable grouping feature
+    groupHeaderTpl: 'Hogwarts House: {name}', // Template for the group header
+    hideGroupedHeader: true // Hide individual headers within each group
+}],
 
   columns:[
     { text: 'Character', dataIndex: 'character', flex: 1 },
@@ -24,6 +29,8 @@ Ext.define("MyApp.view.main.HarryPotterCharacterList", {
 ],
 listeners: {
   itemclick: 'onGridItemClick'
-}
+},
+
+
   
 });
