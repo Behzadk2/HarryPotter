@@ -19,6 +19,7 @@ Ext.define("MyApp.view.main.Main", {
     "MyApp.view.main.ProductView",
     "MyApp.view.main.MyForm",
     "MyApp.view.main.HarryPotterCharacterList",
+    "MyApp.view.main.QA",
   ],
 
   controller: "main",
@@ -111,5 +112,13 @@ Ext.define("MyApp.view.main.Main", {
         },
       ],
     },
+
+    {
+      title: "QA",
+      iconCls: "fa-solid fa-envelope-open-text",
+      xtype: "QA",
+    },
+
+    
   ],
 });

@@ -106,8 +106,45 @@ saveDataLocally: function(formData) {
     formStore.add(formData);
 
     console.log('Data saved locally:', formData);
-}
+},
+//QA
+onGetAnswerClick: async function () {
+    var inputText = this.lookupReference('inputTextField').getValue();
+    var question = this.lookupReference('questionTextField').getValue();
 
+    if (inputText && question) {
+        try {
+            // Call a function to fetch answer from Hugging Face model
+            var answer = await this.fetchAnswer(inputText, question);
+            
+            // Display the answer in the question textfield
+            this.lookupReference('answerTextArea').setValue(answer);
+        } catch (error) {
+            console.error('Error fetching answer:', error);
+        }
+    }
+},
 
+fetchAnswer: async function (inputText, question) {
+    // Use the Hugging Face model API to get the answer
+    // Replace the URL below with the actual API endpoint
+    var apiUrl = 'https://api-inference.huggingface.co/models/deepset/roberta-base-squad2';
+    var response = await Ext.Ajax.request({
+        url: apiUrl,
+        method: 'POST',
+        jsonData: {
+            context: inputText,
+            question: question
+        },
+        success: function (response) {
+            var result = Ext.decode(response.responseText);
+            return result.answer;
+        },
+        failure: function (response) {
+            throw new Error('Failed to fetch answer');
+        }
+    });
 
+    return Ext.decode(response.responseText).answer;
+},
 });
