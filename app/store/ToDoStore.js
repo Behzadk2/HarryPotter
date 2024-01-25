@@ -6,7 +6,7 @@ Ext.define('MyApp.store.ToDoStore', {
     alias: 'store.todostore',
 
     fields: ['task'],
-
+    model: 'MyApp.model.ToDoModel', // Set the model
     data: [
         { task: 'Complete project presentation' },
         { task: 'Attend team meeting' },

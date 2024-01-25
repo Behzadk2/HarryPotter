@@ -5,22 +5,21 @@ Ext.define('MyApp.controller.ToDoListController', {
     alias: 'controller.todolist',
 
     onAddToDoClick: function () {
-        var newToDo = this.lookupReference('newToDoTextField').getValue(),
-            store = this.getViewModel().getStore('todostore'); // Use ViewModel to access the store
-        console.log();
-        if (newToDo && store) {
-            store.add({
+        var newToDo = this.lookupReference('newToDoTextField').getValue();
+
+        if (newToDo) {
+            this.getView().getStore().add({
                 task: newToDo
             });
-    
+
             this.lookupReference('newToDoTextField').setValue('');
         }
     },
     
-    
 
     onDeleteButtonClick: function (button) {
         var record = button.getWidgetRecord();
+        console.log(record);
 
         if (record) {
             this.getView().getStore().remove(record);
