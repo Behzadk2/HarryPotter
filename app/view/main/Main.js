@@ -21,7 +21,9 @@ Ext.define("MyApp.view.main.Main", {
     "MyApp.view.main.HarryPotterCharacterList",
     "MyApp.view.main.QA",
     "MyApp.view.main.ToDoList",
+    'MyApp.store.ToDoStore' 
   ],
+
 
   controller: "main",
   viewModel: "main",

@@ -4,14 +4,32 @@ Ext.define('MyApp.view.main.ToDoList', {
     extend: 'Ext.grid.Panel',
     xtype: 'todolist',
 
-   
-    //controller: 'todolist',
+    requires: [
+        'MyApp.controller.ToDoListController',
+        'MyApp.store.ToDoStore'
+    ],
+
+    controller: 'todolist',
 
     title: 'To-Do List',
 
-     columns: [
-        { text: 'To-Do', dataIndex: 'task', flex: 1 }
-    ], 
+    store: {
+        type: 'todostore'
+    },
+
+    columns: [
+        { text: 'To-Do', dataIndex: 'task', flex: 1 },
+        {
+            text: 'Actions',
+            xtype: 'widgetcolumn',
+            widget: {
+                xtype: 'button',
+                text: 'Delete',
+                handler: 'onDeleteButtonClick'
+            }
+        }
+    ],
+
     dockedItems: [{
         xtype: 'toolbar',
         dock: 'top',
