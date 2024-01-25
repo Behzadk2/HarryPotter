@@ -147,4 +147,23 @@ fetchAnswer: async function (inputText, question) {
 
     return Ext.decode(response.responseText).answer;
 },
+
+//ToDo 
+
+onAddToDoClick: function () {
+    var newToDo = this.lookupReference('newToDoTextField').getValue();
+
+    if (newToDo) {
+        // Add a new row to the grid with the new to-do
+        this.getView().getStore().add({
+            task: newToDo
+        });
+
+        // Clear the textfield after adding the to-do
+        this.lookupReference('newToDoTextField').setValue('');
+    }
+}
+
+
+
 });

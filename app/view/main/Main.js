@@ -20,6 +20,7 @@ Ext.define("MyApp.view.main.Main", {
     "MyApp.view.main.MyForm",
     "MyApp.view.main.HarryPotterCharacterList",
     "MyApp.view.main.QA",
+    "MyApp.view.main.ToDoList",
   ],
 
   controller: "main",
@@ -119,6 +120,11 @@ Ext.define("MyApp.view.main.Main", {
       xtype: "QA",
     },
 
+    {
+      title: "TodoListView",
+      iconCls: "fa-solid fa-envelope-open-text",
+      xtype: "todolist",
+    },
     
   ],
 });
