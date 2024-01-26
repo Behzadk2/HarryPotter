@@ -117,14 +117,14 @@ Ext.define("MyApp.view.main.Main", {
     },
 
     {
-      title: "QA",
-      iconCls: "fa-solid fa-envelope-open-text",
+      title: "Question and Anwser",
+      iconCls: "fa-solid fa-robot",
       xtype: "QA",
     },
 
     {
       title: "TodoListView",
-      iconCls: "fa-solid fa-envelope-open-text",
+      iconCls: "fa fa-list",
       xtype: "todolist",
     },
     

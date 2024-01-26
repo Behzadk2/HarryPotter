@@ -8,7 +8,7 @@ Ext.define('MyApp.view.main.QA', {
     padding: 20,
 
     items: [{
-        xtype: 'textfield',
+        xtype: 'textareafield',
         fieldLabel: 'Input Text',
         reference: 'inputTextField',
         width: '100%',
@@ -24,7 +24,7 @@ Ext.define('MyApp.view.main.QA', {
         text: 'Get Answer',
         handler: 'onGetAnswerClick'
     }, {
-        xtype: 'textareafield',
+        xtype: 'textfield',
         fieldLabel: 'Answer',
         reference: 'answerTextArea',
         width: '100%',

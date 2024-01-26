@@ -17,8 +17,22 @@ Ext.define('MyApp.view.main.ToDoList', {
         type: 'todostore'
     },
 
+    plugins: {
+        cellediting: {
+            clicksToEdit: 2
+        }
+    },
+
     columns: [
-        { text: 'To-Do', dataIndex: 'task', flex: 1 },
+        {
+            text: 'To-Do',
+            dataIndex: 'task',
+            flex: 1,
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
+        },
         {
             text: 'Actions',
             xtype: 'widgetcolumn',
